@@ -4,8 +4,6 @@ class Translation(object):
 
     START_TEXT = """
 အိမ်း
-
-အကူအညီလိုရင် ➠ /help
 """
     HELP_TEXT = """
 <b><u>ဖိုင် (သို့) ဗီဒီယိုအဖြစ် တင်ရန်</u></b>
@@ -32,7 +30,7 @@ class Translation(object):
 """
     START_BUTTONS = InlineKeyboardMarkup(
         [[
-        InlineKeyboardButton('🗣️𝙶𝚛𝚘𝚞𝚙', url='https://t.me/ChannelPlusUsers'),
+        InlineKeyboardButton('Channel+', url='https://t.me/ChannelPlusUsers'),
         ],[
         InlineKeyboardButton('Help', callback_data='help'),
         InlineKeyboardButton('About', callback_data='about'),
@@ -41,7 +39,7 @@ class Translation(object):
     )
     HELP_BUTTONS = InlineKeyboardMarkup(
         [[
-        InlineKeyboardButton('🗣️𝙶𝚛𝚘𝚞𝚙', url='https://t.me/ChannelPlusUsers'),
+        InlineKeyboardButton('Channel+', url='https://t.me/ChannelPlusUsers'),
         ],[
         InlineKeyboardButton('Home', callback_data='home'),
         InlineKeyboardButton('About', callback_data='about'),
@@ -50,7 +48,7 @@ class Translation(object):
     )
     ABOUT_BUTTONS = InlineKeyboardMarkup(
         [[
-        InlineKeyboardButton('🗣️𝙶𝚛𝚘𝚞𝚙', url='https://t.me/ChannelPlusUsers'),
+        InlineKeyboardButton('Channel+', url='https://t.me/ChannelPlusUsers'),
         ],[
         InlineKeyboardButton('Home', callback_data='home'),
         InlineKeyboardButton('Help', callback_data='help'),
