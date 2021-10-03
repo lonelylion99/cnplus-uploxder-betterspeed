@@ -1,0 +1,56 @@
+{
+  "name": "MT-URL-Uploader",
+  "description": "An url uploader bot with permenent thumbnail support",
+  "keywords": [
+    "telegram",
+    "url",
+    "uploader",
+    "pyrogram"
+  ],
+  "success_url": "https://youtube.com/channel/UCmGBpXoM-OEm-FacOccVKgQ",
+  "website": "https://youtube.com/channel/UCmGBpXoM-OEm-FacOccVKgQ",
+  "repository": "https://github.com/MRK-YT/MT-URL-Uploader",
+  "env": {
+    "WEBHOOK": {
+      "description": "Leave this as it is! ANYTHING",
+      "value": "ANYTHING"
+    },
+    "BOT_TOKEN": {
+      "description": "Your bot token from @botfather, as a string."
+    },
+    "APP_ID": {
+      "description": "Get this value from https://my.telegram.org or @MT_MyTelegramOrg_Bot"
+    },
+    "API_HASH": {
+      "description": "Get this value from https://my.telegram.org or @MT_MyTelegramOrg_Bot"
+    },
+    "AUTH_USERS": {
+      "description": "allow only pre-defined users to use this bot"
+    },
+    "TIME_LIMIT": {
+      "description": "Set timeout for subprocess (In seconds)",
+      "value": ""
+    }
+  },
+  "addons": [
+    {
+      "plan": "heroku-postgresql",
+        "options": {
+          "version": "12"
+        }
+      }
+  ],
+  "buildpacks": [{
+    "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest"
+  }, {
+    "url": "https://github.com/opendoor-labs/heroku-buildpack-p7zip"
+  }, {
+    "url": "heroku/python"
+  }],
+  "formation": {
+    "worker": {
+      "quantity": 1,
+      "size": "free"
+    }
+  }
+}
