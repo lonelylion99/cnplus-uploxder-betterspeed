@@ -3,41 +3,36 @@ from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 class Translation(object):
 
     START_TEXT = """
-Hello {} , I'am a url to telegram file or media uploader bot with permanent thumbnail support.
+အိမ်း
 
-Made by @Mo_Tech_YT
+အကူအညီလိုရင် ➠ /help
 """
     HELP_TEXT = """
-<b><u>Link to Media or File</u></b>
-➠ Send a link for upload to telegram file or media.
+<b><u>ဖိုင် (သို့) ဗီဒီယိုအဖြစ် တင်ရန်</u></b>
+➠ တိုက်ရိုက်လင့် ပို့ပေးရုံပဲ
 
-<b><u>Set Thumbnail</u></b>
-➠ Send a photo to make it as permanent thumbnail.
+<b><u>Thumbnail ထည့်ရန်</u></b>
+➠ ကြိုက်တဲ့ပုံပို့ပေး.. တစ်သက်လုံးသိမ်းထားပေးမယ် 😁
 
-<b><u>Deleting Thumbnail</u></b>
-➠ Send /delthumb to deleting thumbnail.
+<b><u>Thumbnail ဖျက်ရန်</u></b>
+➠ /delthumb လို့ ပို့လိုက်
 
-<b><u>Show Thumbnail</u></b>
-➠ Send /showthumb to view custom thumbnail.
+<b><u>အခု ထည့်ထားတဲ့ Thumbnail ကို ပြန်ရန်</u></b>
+➠ /showthumb လို့ ပို့လိုက်
 
-Made by @Mo_Tech_YT
+© Channel+ @ChannelPlusUsers
 """
     ABOUT_TEXT = """
 - **Bot :** URL Uploader
-- **Creator :** [Mrk](https://telegram.dog/Mrk_YT)
-- **Channel :** [MoTech](https://telegram.dog/Mo_Tech_YT)
-- **Credits :** `Everyone in this journey`
-- **Source :** [Click here](https://github.com/MRK-YT/MT-URL-Uploader)
+- **Creator :** [Mrk](https://t.me/LoneWolfCNPlus)
+- **Channel :** [MoTech](https://t.me/ChannelPlusUsers)
+- **Credits :** `Channel+`
 - **Language :** [Python3](https://python.org)
 - **Library :** [Pyrogram v1.2.0](https://pyrogram.org)
-- **Server :** [Heroku](https://heroku.com)
-- **Tutorial :** [Video](https://youtu.be/nRSbkf3memQ)
 """
     START_BUTTONS = InlineKeyboardMarkup(
         [[
-        InlineKeyboardButton('🗣️𝙶𝚛𝚘𝚞𝚙', url='https://t.me/Mo_tech_group'),
-        InlineKeyboardButton('🤖Bot List', url='https://t.me/Mo_Tech_YT/176'),
-        InlineKeyboardButton('👨‍💻Source', url='https://youtu.be/nRSbkf3memQ')
+        InlineKeyboardButton('🗣️𝙶𝚛𝚘𝚞𝚙', url='https://t.me/ChannelPlusUsers'),
         ],[
         InlineKeyboardButton('Help', callback_data='help'),
         InlineKeyboardButton('About', callback_data='about'),
@@ -46,9 +41,7 @@ Made by @Mo_Tech_YT
     )
     HELP_BUTTONS = InlineKeyboardMarkup(
         [[
-        InlineKeyboardButton('🗣️𝙶𝚛𝚘𝚞𝚙', url='https://t.me/Mo_tech_group'),
-        InlineKeyboardButton('🤖Bot List', url='https://t.me/Mo_Tech_YT/176'),
-        InlineKeyboardButton('👨‍💻Source', url='https://youtu.be/nRSbkf3memQ')
+        InlineKeyboardButton('🗣️𝙶𝚛𝚘𝚞𝚙', url='https://t.me/ChannelPlusUsers'),
         ],[
         InlineKeyboardButton('Home', callback_data='home'),
         InlineKeyboardButton('About', callback_data='about'),
@@ -57,31 +50,25 @@ Made by @Mo_Tech_YT
     )
     ABOUT_BUTTONS = InlineKeyboardMarkup(
         [[
-        InlineKeyboardButton('🗣️𝙶𝚛𝚘𝚞𝚙', url='https://t.me/Mo_tech_group'),
-        InlineKeyboardButton('🤖Bot List', url='https://t.me/Mo_Tech_YT/176'),
-        InlineKeyboardButton('👨‍💻Source', url='https://youtu.be/nRSbkf3memQ')
+        InlineKeyboardButton('🗣️𝙶𝚛𝚘𝚞𝚙', url='https://t.me/ChannelPlusUsers'),
         ],[
         InlineKeyboardButton('Home', callback_data='home'),
         InlineKeyboardButton('Help', callback_data='help'),
         InlineKeyboardButton('Close', callback_data='close')
         ]]
     )
-    FORMAT_SELECTION = """<b>Select the desired format:</b> <a href='{}'>file size might be approximate</a>
-    
-Send your custum thumbnail if required.
-You can use /delthumb to delete the auto-generated thumbnail."""
-    CHECKING_LINK = "<code>Analysing Your Link</code>⏳"
-    BANNED_USER_TEXT = "<code>You are Banned!</code>"
-    SET_CUSTOM_USERNAME_PASSWORD = """If you want to download premium videos, provide in the following format:
+    FORMAT_SELECTION = """<b>ဘာ format နဲ့ တင်မလဲ 🤔:</b> <a href='{}'>ဖိုင်ဆိုဒ်ကတော့ အတိအကျ ဖြစ်ချင်မှ ဖြစ်မယ်</a>"""
+    CHECKING_LINK = "<code>လင့်ကို တစ်ချက်ကြည့်မယ်</code>⏳"
+    BANNED_USER_TEXT = "<code>သွား လာမသုံးနဲ့</code>"
+    SET_CUSTOM_USERNAME_PASSWORD = """အကောင့်ဝင်ပြီး ဒေါင်းရတဲ့လင့်တွေဆိုရင် ဒီလိုပို့:
 URL | newfilename | username | password"""
-    DOWNLOAD_START = "<code>Downloading To My server Please Wait...</code>"    
-    UPLOAD_START = "<code>Uploading into Telegram...</code>"
-    AFTER_SUCCESSFUL_UPLOAD_MSG_WITH_TS = "Downloaded in {} seconds. \n\nUploaded in {} seconds."
-    RCHD_TG_API_LIMIT = "Downloaded in {} seconds.\nDetected File Size: {}\nSorry. But, I cannot upload files greater than 1.95GB due to Telegram API limitations."
-    CUSTOM_CAPTION_UL_FILE = "<b>Join :-</b> @Mo_Tech_YT"
+    DOWNLOAD_START = "<code>ဒေါင်းနေပြီ...⏳</code>"    
+    UPLOAD_START = "<code>တင်နေပြီ...⚡️</code>"
+    AFTER_SUCCESSFUL_UPLOAD_MSG_WITH_TS = " {} စက္ကန့် အတွင်း ဒေါင်းလို့ ပြီးပါတယ် \n\n{} စက္ကန့် အတွင်း တင်လို့ ပြီးပါတယ်"
+    RCHD_TG_API_LIMIT = "{} စက္ကန့်အတွင်း ဒေါင်းလို့ ပြီးပါတယ်\nတွေ့ရှိသော ဖိုင်ဆိုဒ်: {}\nTelegram မှာ 2GB ထက် ကျော်ပြီးတော့ တင်လို့မရပါ"
     SLOW_URL_DECED = "Gosh that seems to be a very slow URL. Since you were screwing my home, I am in no mood to download this file. Meanwhile, why don't you try this:==> https://shrtz.me/PtsVnf6 and get me a fast URL so that I can upload to Telegram, without me slowing down for other users."
     NO_VOID_FORMAT_FOUND = "<code>{}</code>"
     REPORT_SITE_TEXT = "<code>Sorry not uploading in this site here because this site is reporting site.</code>"
-    SOMETHING_WRONG = "<code>Something Wrong. Try again.</code>"
-    FORCE_SUBSCRIBE_TEXT = "<code>Sorry Dear You Must Join My Updates Channel for using me 😌😉....</code>"
+    SOMETHING_WRONG = "<code>ဘိ.. ဘော့.. ဘု.. တစ်ခုခုတော့ ချို့ယွင်းနေပီ</code>"
+    FORCE_SUBSCRIBE_TEXT = "<code>Channel ကို မ join ပဲ လာမသုံးနဲ့ သွား 😌😉....</code>"
     FREE_USER_LIMIT_Q_SZE = "Sorry Friend, Free users can only 1 request per {} minutes. Please try again after {} seconds later."
